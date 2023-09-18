@@ -1,0 +1,47 @@
+---
+title: "A_gentle_introduction_to_R"
+author: "L Leston"
+date: "2023-09-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot. The `eval = FALSE` parameter can be added to the code chunk to prevent running of the R code within the chunk.
+
+```{r speed}
+plot(cars$speed, cars$dist)
+```
+
+The **plot** function can be used to generate scatter plots showing the relationship between two numeric variables. The independent or x variable is the first one listed in the parenthesis, and the second variable in the parentheses is the dep
+Check R and RStudio are working.
+
+```{r ggplot2-mtcars}
+#install.packages("ggplot2")
+library(ggplot2)
+p <- ggplot(mtcars, aes(wt, mpg))
+p + geom_point(aes(size = qsec, colour = factor(cyl)))
+```
+
+Running this chunk displays the code for calling in the *ggplot2* package with the **library** command and creating a scatter plot from two variables in the built-in
+car engine data set.
