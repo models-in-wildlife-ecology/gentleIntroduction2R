@@ -1,5 +1,5 @@
 ---
-title: "A_gentle_introduction_to_R"
+title: "A gentle introduction to RMarkdown"
 author: "L Leston"
 date: "2023-09-18"
 output: html_document
@@ -33,8 +33,9 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 plot(cars$speed, cars$dist)
 ```
 
-The **plot** function can be used to generate scatter plots showing the relationship between two numeric variables. The independent or x variable is the first one listed in the parenthesis, and the second variable in the parentheses is the dep
-Check R and RStudio are working.
+The **plot** function in base R is used to generate scatter plots showing the relationship between two numeric variables. The *independent* or *x variable* is the first one listed in the parentheses, and the second variable in the parentheses is the *dependent* or *y variable*.
+
+Beautiful plots can be created in R using the basic **plot** function, but there are many packages that can be used to create a wider range of nice-looking plots. *ggplot2* is one such package.
 
 ```{r ggplot2-mtcars}
 #install.packages("ggplot2")
@@ -45,3 +46,5 @@ p + geom_point(aes(size = qsec, colour = factor(cyl)))
 
 Running this chunk displays the code for calling in the *ggplot2* package with the **library** command and creating a scatter plot from two variables in the built-in
 car engine data set.
+
+To get comfortable using RMarkdown, try taking the original "A_gentle_introduction_to_R" script and copying the lines of code to code chunks and describing what each chunk of code does in the white space after each code chunk. Give each code chunk a unique name. For now, don't add `echo = FALSE` or `eval = FALSE` to the chunks. When you're ready, click the "Knit" button to create a nice-looking document containing both the code for and results of a particular analysis.
